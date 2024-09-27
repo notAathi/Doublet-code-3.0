@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battery Icon</title>
+  <style>
+    .battery {
+      width: 100px;
+      height: 50px;
+      border: 3px solid #333;
+      border-radius: 5px;
+      position: relative;
+      background-color: #e0e0e0;
+    }
+
+    .battery::after {
+      content: "";
+      width: 10px;
+      height: 20px;
+      background-color: #333;
+      position: absolute;
+      top: 50%;
+      right: -13px;
+      transform: translateY(-50%);
+      border-radius: 2px;
+    }
+
+    
+    .charge {
+      width: 80%;
+      height: 100%;
+      background-color: #07e178;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+    }
+
+    
+    .lightning {
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid white;
+      position: absolute;
+      left: 35px;
+      top: 15px;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="battery">
+    <div class="charge"></div>
+    <div class="lightning"></div>
+  </div>
+
+</body>
+</html>
